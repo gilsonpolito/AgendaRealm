@@ -206,7 +206,6 @@ public class MainActivity extends AppCompatActivity {
                 if (swipeDir == ItemTouchHelper.RIGHT) {
                     Contato contato = contatos.get(viewHolder.getAdapterPosition());
                     cDAO.apagaContato(contato);
-                    //contatos.remove(viewHolder.getAdapterPosition());
                     recyclerView.getAdapter().notifyDataSetChanged();
                     showSnackBar(getResources().getString(R.string.contato_apagado));
                     updateUI(null);
